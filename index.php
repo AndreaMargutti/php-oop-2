@@ -43,7 +43,7 @@ require_once __DIR__ . "/db/data.php";
                     <?php echo $product->category->icon; ?>
                 </li>
                 <!--Inizio specifiche per cibo-->
-                <?php if($product("Food")) { ?>
+                <?php if(is_a($product, "Food")) { ?>
                 <li class="list-group-item">
                     <?php echo $product->brand; ?>
                 </li>
@@ -52,6 +52,13 @@ require_once __DIR__ . "/db/data.php";
                 </li>
                 <li class="list-group-item">
                     <?php echo $product->size; ?>
+                </li>
+                <?php } else { ?>
+                <li class="list-group-item">
+                    <?php echo $product->sound; ?>
+                </li>
+                <li class="list-group-item">
+                    <?php echo $product->gameType; ?>
                 </li>
                 <?php } ?>
             </ul>

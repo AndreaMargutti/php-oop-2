@@ -3,8 +3,8 @@
 require_once __DIR__ . "/Product.php";
 
 class Game extends Product {
-    protected bool $sound;
-    protected string $gameType;
+    public bool $sound;
+    public string $gameType;
     
 
     public function __construct($name, $price, $locate, $category, $sound, $gameType)
