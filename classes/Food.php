@@ -7,10 +7,10 @@ class Food extends Product {
     public string $solidity;
     public mixed $size;
 
-    public function __construct($price, $locate, $category,
+    public function __construct($name, $price, $locate,
     $brand, $solidity, $size)
     {
-        parent::__construct("Cibo", $price, $locate, $category);
+        parent::__construct($name, $price, $locate, new Category("Food", "Icona Cibo"));
         $this->brand = $brand;
         $this->solidity = $solidity;
         $this->size = $size;

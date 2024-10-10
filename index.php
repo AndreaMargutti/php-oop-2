@@ -35,7 +35,7 @@ require_once __DIR__ . "../classes/Product.php";
             </ul>
         </div>
         <?php
-            $newFood = new Food(14, "4b", new Category("Cibo", "Icona Cibo"), "GoodFoods", "umido", "4kg");
+            $newFood = new Game("Cibo 1", 14, "4b", true, "pallina");
              var_dump($newFood);
         ?>
     </main>
