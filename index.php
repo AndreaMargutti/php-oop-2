@@ -1,6 +1,7 @@
 <?php 
 
-require_once __DIR__ . "../classes/Product.php";
+var_dump(__DIR__);
+require_once __DIR__ . "./db/data.php";
 
 ?>
 
@@ -34,10 +35,6 @@ require_once __DIR__ . "../classes/Product.php";
                 <li class="list-group-item"></li>
             </ul>
         </div>
-        <?php
-            $newFood = new Game("Cibo 1", 14, "4b", true, "pallina");
-             var_dump($newFood);
-        ?>
     </main>
 </body>
 
