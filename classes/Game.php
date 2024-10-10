@@ -7,9 +7,9 @@ class Game extends Product {
     protected string $gameType;
     
 
-    public function __construct($name, $price, $locate, $sound, $gameType)
+    public function __construct($name, $price, $locate, $category, $sound, $gameType)
     {
-        parent::__construct($name, $price, $locate, new Category("Game", "Icona Gioco"));
+        parent::__construct($name, $price, $locate, $category);
         $this->sound = $sound;
         $this->gameType = $gameType;
     }   
