@@ -1,5 +1,7 @@
 <?php 
+
 require_once __DIR__ . "../classes/Product.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +25,7 @@ require_once __DIR__ . "../classes/Product.php";
             <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text">
-                    <?php
-                    var_dump(new Product("Cibo", 43, "scaffale 1b"))
-                    ?>
+
                 </p>
             </div>
             <ul class="list-group list-group-flush">
@@ -34,6 +34,10 @@ require_once __DIR__ . "../classes/Product.php";
                 <li class="list-group-item"></li>
             </ul>
         </div>
+        <?php
+            $newCategory = new Category("Cibo", 14, "4b", "Cani", "icona categoria");
+             var_dump($newCategory);
+        ?>
     </main>
 </body>
 
