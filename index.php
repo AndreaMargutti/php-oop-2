@@ -20,48 +20,52 @@ require_once __DIR__ . "/db/data.php";
 <body>
     <main class="container text-center py-2">
         <h1>E-Commerce OOP</h1>
+        <div class="row"></div>
         <?php foreach($products as $product) { ?>
-        <div class="card mt-4" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <?php echo $product->name; ?>
-                </h5>
-                <p class="card-text">
+        <div class="col">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <?php echo $product->name; ?>
+                    </h5>
+                    <p class="card-text">
 
-                </p>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <?php echo $product->price; ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $product->locate; ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $product->category->type; ?>
+                        <br>
+                        <img src="<?php echo $product->category->icon; ?>" alt="dog icon" width="5%">
+                    </li>
+                    <li></li>
+                    <!--Inizio specifiche per cibo-->
+                    <?php if(is_a($product, "Food")) { ?>
+                    <li class="list-group-item">
+                        <?php echo $product->brand; ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $product->solidity; ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $product->size; ?>
+                    </li>
+                    <?php } else { ?>
+                    <li class="list-group-item">
+                        <?php echo $product->sound; ?>
+                    </li>
+                    <li class="list-group-item">
+                        <?php echo $product->gameType; ?>
+                    </li>
+                    <?php } ?>
+                </ul>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <?php echo $product->price; ?>
-                </li>
-                <li class="list-group-item">
-                    <?php echo $product->locate; ?>
-                </li>
-                <li class="list-group-item">
-                    <?php echo $product->category->type; ?>
-                    <?php echo $product->category->icon; ?>
-                </li>
-                <!--Inizio specifiche per cibo-->
-                <?php if(is_a($product, "Food")) { ?>
-                <li class="list-group-item">
-                    <?php echo $product->brand; ?>
-                </li>
-                <li class="list-group-item">
-                    <?php echo $product->solidity; ?>
-                </li>
-                <li class="list-group-item">
-                    <?php echo $product->size; ?>
-                </li>
-                <?php } else { ?>
-                <li class="list-group-item">
-                    <?php echo $product->sound; ?>
-                </li>
-                <li class="list-group-item">
-                    <?php echo $product->gameType; ?>
-                </li>
-                <?php } ?>
-            </ul>
         </div>
         <?php } ?>
     </main>
