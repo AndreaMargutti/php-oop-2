@@ -24,15 +24,36 @@ require_once __DIR__ . "/db/data.php";
         <div class="card mt-4" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title">
+                    <?php echo $product->name; ?>
+                </h5>
                 <p class="card-text">
 
                 </p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
+                <li class="list-group-item">
+                    <?php echo $product->price; ?>
+                </li>
+                <li class="list-group-item">
+                    <?php echo $product->locate; ?>
+                </li>
+                <li class="list-group-item">
+                    <?php echo $product->category->type; ?>
+                    <?php echo $product->category->icon; ?>
+                </li>
+                <!--Inizio specifiche per cibo-->
+                <?php if($product("Food")) { ?>
+                <li class="list-group-item">
+                    <?php echo $product->brand; ?>
+                </li>
+                <li class="list-group-item">
+                    <?php echo $product->solidity; ?>
+                </li>
+                <li class="list-group-item">
+                    <?php echo $product->size; ?>
+                </li>
+                <?php } ?>
             </ul>
         </div>
         <?php } ?>
