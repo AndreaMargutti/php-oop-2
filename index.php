@@ -20,6 +20,7 @@ require_once __DIR__ . "/db/data.php";
 <body>
     <main class="container text-center py-2">
         <h1>E-Commerce OOP</h1>
+        <?php foreach($products as $product) { ?>
         <div class="card mt-4" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
@@ -34,6 +35,7 @@ require_once __DIR__ . "/db/data.php";
                 <li class="list-group-item"></li>
             </ul>
         </div>
+        <?php } ?>
     </main>
 </body>
 
