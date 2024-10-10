@@ -35,8 +35,8 @@ require_once __DIR__ . "../classes/Product.php";
             </ul>
         </div>
         <?php
-            $newCategory = new Category("Cibo", 14, "4b", "Cani", "icona categoria");
-             var_dump($newCategory);
+            $newFood = new Food(14, "4b", new Category("Cibo", "Icona Cibo"), "GoodFoods", "umido", "4kg");
+             var_dump($newFood);
         ?>
     </main>
 </body>
