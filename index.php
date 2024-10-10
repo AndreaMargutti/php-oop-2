@@ -1,7 +1,6 @@
 <?php 
 
-var_dump(__DIR__);
-require_once __DIR__ . "./db/data.php";
+require_once __DIR__ . "/db/data.php";
 
 ?>
 
