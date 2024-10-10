@@ -5,10 +5,10 @@ require_once __DIR__ . "/Food.php";
 require_once __DIR__ . "/Game.php";
 
 class Product {
-    public string $name;
-    public float $price;
-    public string $locate;
-    public Category $category;
+    protected string $name;
+    protected float $price;
+    protected string $locate;
+    protected Category $category;
 
     public function __construct($name, $price, $locate, $category)
     {
