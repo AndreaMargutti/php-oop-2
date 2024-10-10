@@ -1,7 +1,5 @@
 <?php 
-
 require_once __DIR__ . "/db/data.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +42,6 @@ require_once __DIR__ . "/db/data.php";
                         <br>
                         <img src="<?php echo $product->category->icon; ?>" alt="dog icon" width="5%">
                     </li>
-                    <li></li>
                     <!--Inizio specifiche per cibo-->
                     <?php if(is_a($product, "Food")) { ?>
                     <li class="list-group-item">
