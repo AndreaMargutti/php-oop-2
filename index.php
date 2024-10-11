@@ -71,6 +71,7 @@ require_once __DIR__ . "/db/data.php";
                         <?php echo $product->possibleSellers; ?>
                     </li>
                     <li class="list-group-item text-primary">
+                        <!--Esegui la funzione e, se non riesci, lancia l'eccezzione!-->
                         <?php try {
                             echo $product->buy(-4);       
                         } catch (ArithmeticError $e) {
