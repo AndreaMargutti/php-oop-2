@@ -58,13 +58,24 @@ require_once __DIR__ . "/db/data.php";
                     <li class="list-group-item">
                         <?php echo $product->size; ?>
                     </li>
-                    <!--Nel caso in cui NON fosse cibo...-->
-                    <?php } else { ?>
+                    <!--Nel caso in cui fosse un gioco...-->
+                    <?php } else if (is_a($product, "Game")){ ?>
                     <li class="list-group-item">
-                        <?php echo $product->sound; ?>
+                        <?php if($product->sound) {
+                        echo "Rumoroso";
+                        } else {
+                            echo "Silenzioso";
+                        } ?>
                     </li>
                     <li class="list-group-item">
                         <?php echo $product->gameType; ?>
+                    </li>
+                    <?php } else if(is_a($product, "Kennel")) {  ?>
+                    <li class="list-group-item">
+                        <?php echo $product->height ?>
+                    </li>
+                    <li class="list-group-item">
+                    <?php echo $product->width ?>
                     </li>
                     <?php } ?>
                     <li class="list-group-item text-primary">

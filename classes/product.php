@@ -3,6 +3,7 @@
 require_once __DIR__ . "/Category.php";
 require_once __DIR__ . "/Food.php";
 require_once __DIR__ . "/Game.php";
+require_once __DIR__ . "/Kennel.php";
 
 class Product {
     public string $name;
