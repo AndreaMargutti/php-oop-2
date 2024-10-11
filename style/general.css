@@ -1,0 +1,49 @@
+/* custom properties */
+
+:root{
+    --primary-color: #ffd500;
+    --secondary-color: #000000;
+} 
+
+/*# Header */
+
+header {
+    color: var(--primary-color);
+    min-height: 7rem;
+    background-color: var(--secondary-color);  
+    font-family: "Anton", sans-serif;
+}
+
+
+/*# Generals*/
+
+main {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+li {
+    height: 100%;
+}
+
+.bg-yellow {
+    background-color: var(--primary-color);
+}
+
+.c-black {
+    color: var(--secondary-color);
+}
+
+/*# Card*/
+
+.card-title {
+    color: var(--secondary-color);
+}
+
+li > span {
+    vertical-align: middle;
+}
+
+.list-group-item {
+    border: 1px solid var(--secondary-color);
+}
