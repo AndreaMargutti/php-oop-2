@@ -10,14 +10,22 @@ require_once __DIR__ . "/db/data.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bootstrap-->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css'
-        integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=='
-        crossorigin='anonymous' />
+    integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=='
+    crossorigin='anonymous' />
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!--General Style-->
+    <link rel="stylesheet" href="./style/general.css">
     <title>php-oop-2</title>
 </head>
 
 <body>
-    <main class="container text-center my-4">
+    <header class="mb-3 d-flex justify-content-center align-items-center">
         <h1>E-Commerce OOP</h1>
+    </header>
+    <main class="container text-center">
         <section class="row row-cols-2">
             <?php foreach($products as $product) { ?>
             <div class="col my-3">
