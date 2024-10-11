@@ -3,9 +3,18 @@
 header {
     color: #ffd500;
     min-height: 5rem;
-    background-color: #000000;   
+    background-color: #000000;  
+    font-family: "Anton", sans-serif;
 }
 
-header h1 {
-    font-family: "Anton", sans-serif;
+main {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+li {
+    height: 100%;
+}
+
+li > span {
+    vertical-align: middle;
 }
