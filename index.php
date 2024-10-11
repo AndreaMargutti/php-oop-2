@@ -53,6 +53,7 @@ require_once __DIR__ . "/db/data.php";
                     <li class="list-group-item">
                         <?php echo $product->size; ?>
                     </li>
+                    <!--Nel caso in cui NON fosse cibo...-->
                     <?php } else { ?>
                     <li class="list-group-item">
                         <?php echo $product->sound; ?>
@@ -61,6 +62,9 @@ require_once __DIR__ . "/db/data.php";
                         <?php echo $product->gameType; ?>
                     </li>
                     <?php } ?>
+                    <li class="list-group-item text-primary">
+                        <?php echo $product->possibleSellers?>
+                    </li>
                 </ul>
             </div>
         </div>
