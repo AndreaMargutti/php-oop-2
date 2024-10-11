@@ -30,31 +30,31 @@ require_once __DIR__ . "/db/data.php";
             <section class="row row-cols-2">
                 <?php foreach($products as $product) { ?>
                 <div class="col my-3">
-                    <div class="card h-100">
+                    <div class="card bg-yellow h-100">
                         <div class="card-header py-3">
-                            <h5 class="card-title fw-bold">
+                            <h5 class="card-title c-black fw-bold">
                                 <?php echo $product->name; ?>
                             </h5>
                         </div>
                         <ul class="list-group list-group-flush h-100">
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                              <span>
                                  Prezzo:
                                  <?php echo $product->price; ?>
                              </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     Quantità Disponibile:
                                     <?php echo $product->inStock; ?>
                                 </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->locate; ?>
                                 </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->category->type; ?>
                                     <br>
@@ -63,24 +63,24 @@ require_once __DIR__ . "/db/data.php";
                             </li>
                             <!--Inizio specifiche per cibo-->
                             <?php if(is_a($product, "Food")) { ?>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->brand; ?>
                                 </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>  
                                     <?php echo $product->solidity; ?>
                                 </span>    
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->size; ?>
                                 </span>
                             </li>
                             <!--Nel caso in cui fosse un gioco...-->
                             <?php } else if (is_a($product, "Game")){ ?>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php if($product->sound) {
                                         echo "Rumoroso";
@@ -89,29 +89,29 @@ require_once __DIR__ . "/db/data.php";
                                     } ?>
                                 </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->gameType; ?>
                                 </span>
                             </li>
                             <?php } else if(is_a($product, "Kennel")) {  ?>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->height ?>
                                 </span>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-yellow">
                                 <span>
                                     <?php echo $product->width ?>
                                 </span>
                             </li>
                             <?php } ?>
-                            <li class="list-group-item text-primary">
+                            <li class="list-group-item c-black bg-yellow">
                                 <span>
                                     <?php echo $product->possibleSellers; ?>
                                 </span>
                             </li>
-                            <li class="list-group-item text-primary">
+                            <li class="list-group-item c-black bg-yellow fw-bold">
                                 <span>
                                     <!--Esegui la funzione e, se non riesci, lancia l'eccezzione!-->
                                     <?php try {
