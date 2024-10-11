@@ -1,9 +1,16 @@
+/* custom properties */
+
+:root{
+    --primary-color: #ffd500;
+    --background-c: #000000;
+} 
+
 /*# Header */
 
 header {
-    color: #ffd500;
+    color: var(--primary-color);
     min-height: 5rem;
-    background-color: #000000;  
+    background-color: var(--background-c);  
     font-family: "Anton", sans-serif;
 }
 
@@ -17,4 +24,8 @@ li {
 
 li > span {
     vertical-align: middle;
+}
+
+.card-title {
+    color: var(--primary-color);
 }

@@ -31,8 +31,8 @@ require_once __DIR__ . "/db/data.php";
                 <?php foreach($products as $product) { ?>
                 <div class="col my-3">
                     <div class="card h-100">
-                        <div class="card-header">
-                            <h5 class="card-title">
+                        <div class="card-header py-3">
+                            <h5 class="card-title fw-bold">
                                 <?php echo $product->name; ?>
                             </h5>
                         </div>
