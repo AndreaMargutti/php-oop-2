@@ -10,10 +10,10 @@ class Food extends Product {
 
     use possibleSellers;
 
-    public function __construct($name, $price, $locate, $category,
+    public function __construct($name, $price, $inStock, $locate, $category,
     $brand, $solidity, $size, $possibleSellers)
     {
-        parent::__construct($name, $price, $locate, $category,);
+        parent::__construct($name, $price, $inStock, $locate, $category,);
         $this->brand = $brand;
         $this->solidity = $solidity;
         $this->size = $size;

@@ -35,6 +35,9 @@ require_once __DIR__ . "/db/data.php";
                         <?php echo $product->price; ?>
                     </li>
                     <li class="list-group-item">
+                        <?php echo $product->inStock; ?>
+                    </li>
+                    <li class="list-group-item">
                         <?php echo $product->locate; ?>
                     </li>
                     <li class="list-group-item">

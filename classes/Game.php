@@ -9,9 +9,9 @@ class Game extends Product {
 
     use possibleSellers;
 
-    public function __construct($name, $price, $locate, $category, $sound, $gameType, $possibleSeller)
+    public function __construct($name, $price, $inStock, $locate, $category, $sound, $gameType, $possibleSeller)
     {
-        parent::__construct($name, $price, $locate, $category);
+        parent::__construct($name, $price, $inStock, $locate, $category);
         $this->sound = $sound;
         $this->gameType = $gameType;
         $this->possibleSellers = $possibleSeller;
