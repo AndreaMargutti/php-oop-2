@@ -32,9 +32,11 @@ require_once __DIR__ . "/db/data.php";
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
+                        Prezzo:
                         <?php echo $product->price; ?>
                     </li>
                     <li class="list-group-item">
+                        Quantità Disponibile:
                         <?php echo $product->inStock; ?>
                     </li>
                     <li class="list-group-item">
@@ -66,7 +68,14 @@ require_once __DIR__ . "/db/data.php";
                     </li>
                     <?php } ?>
                     <li class="list-group-item text-primary">
-                        <?php echo $product->possibleSellers?>
+                        <?php echo $product->possibleSellers; ?>
+                    </li>
+                    <li class="list-group-item text-primary">
+                        <?php try {
+                            echo $product->buy(-4);       
+                        } catch (ArithmeticError $e) {
+                            echo $e->getMessage();
+                        } ?>
                     </li>
                 </ul>
             </div>

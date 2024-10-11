@@ -18,6 +18,14 @@ class Product {
       $this->inStock = $inStock;
       $this->locate = $locate;
       $this->category = $category;
+    }
 
+    public function buy($bought){
+      if($this->inStock >= 0 && $bought > 0){
+        $bought = $this->inStock * $this->price;
+      } else {
+        throw new ArithmeticError ('Non puoi acquistare un numero di oggetti inferiore a zero');
+      }
+      return $bought;
     }
 }

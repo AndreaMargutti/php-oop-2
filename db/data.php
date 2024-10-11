@@ -3,7 +3,7 @@ require_once __DIR__ . "/../classes/Product.php";
 
 $products = [
     // # Food 1
-    new Food("Crocchette Junior", 5, 40, "2A", new Category("Cani", "https://cdn-icons-png.flaticon.com/512/620/620851.png"), "JuniorFood", "Secco", "10Kg", "Arcaplanet, GiocAnimali"),
+    new Food("Crocchette Junior", 5, 10, "2A", new Category("Cani", "https://cdn-icons-png.flaticon.com/512/620/620851.png"), "JuniorFood", "Secco", "10Kg", "Arcaplanet, GiocAnimali"),
     // # Game 1
     new Game("Rimbalz Ball", 3, 20, "3C", new Category("Cani", "https://cdn-icons-png.flaticon.com/512/620/620851.png"), true, "Pallina", "Arcaplanet, La Casa degli Animali"),
     // # Food 2
