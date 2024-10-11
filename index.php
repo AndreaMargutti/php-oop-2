@@ -26,9 +26,6 @@ require_once __DIR__ . "/db/data.php";
                     <h5 class="card-title">
                         <?php echo $product->name; ?>
                     </h5>
-                    <p class="card-text">
-
-                    </p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
